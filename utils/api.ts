@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 export async function fetchWaitingList(date: string) {
   const res = await axios.get(`${BASE_URL}/waiting-list/${date}`);

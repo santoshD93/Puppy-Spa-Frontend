@@ -23,3 +23,19 @@ npm run dev
 Frontend runs at: http://localhost:3000
 
 Make sure the backend is running on http://localhost:4000 for full functionality.
+
+## Project Structure
+
+components/
+  - PuppyCard.tsx
+  - PuppyList.tsx
+  - Loader.tsx
+  - AddPuppyForm.tsx
+
+utils/
+  - api.ts
+  - cn.ts
+
+app/
+  - page.tsx (or index.tsx depending on routing)
+

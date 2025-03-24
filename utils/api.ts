@@ -41,3 +41,11 @@ export async function fetchWaitingListById(id: string) {
     const res = await axios.get(`${BASE_URL}/waiting-list/by-id/${id}`);
     return res.data;
 }
+
+export async function searchPuppies(term: string) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/puppy/search?term=${encodeURIComponent(term)}`);
+  if (!res.ok) {
+    throw new Error("Failed to search puppies");
+  }
+  return res.json();
+}

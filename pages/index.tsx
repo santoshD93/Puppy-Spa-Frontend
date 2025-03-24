@@ -1,5 +1,3 @@
-// 📁 puppy-spa-frontend/pages/index.tsx
-
 import PuppyList from "@/components/PuppyList";
 
 export default function Home() {

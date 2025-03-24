@@ -132,8 +132,13 @@ export default function PuppyList() {
 
   const createListMutation = useMutation({
     mutationFn: createWaitingList,
-    onSuccess: () => queryClient.invalidateQueries(),
+    onSuccess: (newList) => {
+      queryClient.invalidateQueries();
+      setSelectedDate(newList.date);
+      setSelectedListId(newList.id);
+    },
   });
+  
 
   const movePuppy = (dragIndex: number, hoverIndex: number) => {
     const updated = [...puppies];
